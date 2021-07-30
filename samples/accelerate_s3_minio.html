@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DEMO - Speed Up Accessing Minio Files | Fluid</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/vuepresswebsite/fluid-stacked-color.svg">
+    <meta name="description" content="Fluid, elastic data abstraction and acceleration for BigData/AI applications in cloud.">
+    
+    <link rel="preload" href="/vuepresswebsite/assets/css/0.styles.1e2b0eee.css" as="style"><link rel="preload" href="/vuepresswebsite/assets/js/app.62980e8d.js" as="script"><link rel="preload" href="/vuepresswebsite/assets/js/2.9a6ad13a.js" as="script"><link rel="preload" href="/vuepresswebsite/assets/js/37.9d5e141f.js" as="script"><link rel="prefetch" href="/vuepresswebsite/assets/js/10.dd472adc.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/11.19c26ce4.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/12.41075cef.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/13.e715ec2c.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/14.886d72d3.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/15.b6a2be84.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/16.4dcedb7d.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/17.f95b6c7e.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/18.af2dc32f.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/19.34c0dd6a.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/20.a4e6b7ab.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/21.9b46bb25.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/22.643ca307.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/23.79764695.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/24.112d9587.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/25.d1d6c632.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/26.762e9252.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/27.1b0c0345.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/28.0d96ba8d.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/29.d227017f.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/3.b887a95d.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/30.b886c854.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/31.107d4f72.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/32.b27e572d.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/33.43ef3449.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/34.4fe6c9b6.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/35.a15bfcef.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/36.b23781fe.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/38.55aca518.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/39.5e960c44.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/4.fccdcfbd.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/40.50864941.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/41.494a04d1.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/42.b99d7305.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/43.fea205eb.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/44.9088e230.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/45.a94b2a9d.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/46.26a8e862.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/47.18cbe250.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/48.ba13dd49.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/49.99d1e0c5.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/5.ec1ee913.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/50.a454b1d9.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/51.121f157b.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/52.adec05ae.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/53.1a0fbd40.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/54.335d85c6.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/55.9cab70b1.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/56.546242ca.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/57.78332555.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/58.9e25a51a.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/59.3441c002.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/6.aa3c3257.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/60.43585e16.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/61.abdfa916.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/62.64f9138b.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/63.a1059ea6.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/64.3f19fef4.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/65.ab097974.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/66.80e6542a.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/67.64dd5459.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/68.c6729130.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/69.c4a06b06.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/7.db6ed301.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/70.2f7b8ef9.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/71.80d026f1.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/72.2b04e9ae.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/73.09e7b840.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/74.826dc400.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/75.092b7183.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/76.678b08b3.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/77.60202d0d.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/78.6be2ca13.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/79.dfd5e9a3.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/8.58db8978.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/80.5a7939e2.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/81.d1c5ea9e.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/82.03ad3105.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/83.8b4538fe.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/84.bdf345d6.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/85.c97702e3.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/86.88711427.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/87.4855b59a.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/88.0296f468.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/89.32efc65b.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/9.71e690e0.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/90.dbb9a9be.js"><link rel="prefetch" href="/vuepresswebsite/assets/js/91.3740289e.js">
+    <link rel="stylesheet" href="/vuepresswebsite/assets/css/0.styles.1e2b0eee.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepresswebsite/" class="home-link router-link-active"><img src="/vuepresswebsite/fluid-horizontal-color.png" alt="Fluid" class="logo"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Docs" class="dropdown-title"><span class="title">Docs</span> <span class="arrow down"></span></button> <button type="button" aria-label="Docs" class="mobile-dropdown-title"><span class="title">Docs</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepresswebsite/guide/" class="nav-link">
+  Guide
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/dev/" class="nav-link">
+  Dev
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/samples/" class="nav-link router-link-active">
+  Samples
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Community" class="dropdown-title"><span class="title">Community</span> <span class="arrow down"></span></button> <button type="button" aria-label="Community" class="mobile-dropdown-title"><span class="title">Community</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepresswebsite/community/community.html" class="nav-link">
+  Community
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/community/ADOPTERS.html" class="nav-link">
+  Adopters
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Blog" class="dropdown-title"><span class="title">Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="Blog" class="mobile-dropdown-title"><span class="title">Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepresswebsite/blog/technology/" class="nav-link">
+  Technology
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/blog/releases/" class="nav-link">
+  Releases
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/blog/casestudy/" class="nav-link">
+  Case Study
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepresswebsite/samples/accelerate_s3_minio.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/zh/" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Docs" class="dropdown-title"><span class="title">Docs</span> <span class="arrow down"></span></button> <button type="button" aria-label="Docs" class="mobile-dropdown-title"><span class="title">Docs</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepresswebsite/guide/" class="nav-link">
+  Guide
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/dev/" class="nav-link">
+  Dev
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/samples/" class="nav-link router-link-active">
+  Samples
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Community" class="dropdown-title"><span class="title">Community</span> <span class="arrow down"></span></button> <button type="button" aria-label="Community" class="mobile-dropdown-title"><span class="title">Community</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepresswebsite/community/community.html" class="nav-link">
+  Community
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/community/ADOPTERS.html" class="nav-link">
+  Adopters
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Blog" class="dropdown-title"><span class="title">Blog</span> <span class="arrow down"></span></button> <button type="button" aria-label="Blog" class="mobile-dropdown-title"><span class="title">Blog</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepresswebsite/blog/technology/" class="nav-link">
+  Technology
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/blog/releases/" class="nav-link">
+  Releases
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/blog/casestudy/" class="nav-link">
+  Case Study
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepresswebsite/samples/accelerate_s3_minio.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/vuepresswebsite/zh/" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/vuepresswebsite/samples/" aria-current="page" class="sidebar-link">DEMO - Speed Up Accessing Remote Files</a></li><li><a href="/vuepresswebsite/samples/accelerate_pvc.html" class="sidebar-link">DEMO - Accelerate PVC with Fluid</a></li><li><a href="/vuepresswebsite/samples/machinelearning.html" class="sidebar-link">DEMO - Accelerate Machine Learning Training with Fluid</a></li><li><a href="/vuepresswebsite/samples/data_warmup.html" class="sidebar-link">Demo - Data Preloading</a></li><li><a href="/vuepresswebsite/samples/accelerate_hdfs.html" class="sidebar-link">DEMO - Speed Up Accessing HDFS Client Files</a></li><li><a href="/vuepresswebsite/samples/accelerate_s3_minio.html" aria-current="page" class="active sidebar-link">DEMO - Speed Up Accessing Minio Files</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vuepresswebsite/samples/data_co_locality.html" class="sidebar-link">DEMO - Cache Co-locality for Workload Scheduling</a></li><li><a href="/vuepresswebsite/samples/multi_dataset_same_node_accessing.html" class="sidebar-link">DEMO - Single-Machine Multiple-Dataset Speed Up Accessing Remote Files</a></li><li><a href="/vuepresswebsite/samples/nonroot_access.html" class="sidebar-link">Example - Using Fluid to access non-root user's data</a></li><li><a href="/vuepresswebsite/samples/tieredstore_config.html" class="sidebar-link">Demo - Alluxio Tieredstore Configuration</a></li><li><a href="/vuepresswebsite/samples/use_encryptoptions.html" class="sidebar-link">DEMO - Use Secret to configure Dataset sensitive information</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="demo-speed-up-accessing-minio-files"><a href="#demo-speed-up-accessing-minio-files" class="header-anchor">#</a> DEMO - Speed Up Accessing Minio Files</h1> <p>Start a standalone Minio locally as a remote S3 service. This example is for demonstration purposes only, not production</p> <h3 id="start-minio-demo"><a href="#start-minio-demo" class="header-anchor">#</a> start minio demo</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>docker run -ti -p <span class="token number">9000</span>:9000 --name minio minio/minio server /data
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>Endpoint: http://172.17.0.8:9000  http://127.0.0.1:9000 
+RootUser: minioadmin 
+RootPass: minioadmin 
+
+Browser Access:
+   http://172.17.0.8:9000  http://127.0.0.1:9000
+
+Command-line Access: https://docs.min.io/docs/minio-client-quickstart-guide
+   $ mc alias set myminio http://172.17.0.8:9000 minioadmin minioadmin
+
+Object API (Amazon S3 compatible):
+   Go:         https://docs.min.io/docs/golang-client-quickstart-guide
+   Java:       https://docs.min.io/docs/java-client-quickstart-guide
+   Python:     https://docs.min.io/docs/python-client-quickstart-guide
+   JavaScript: https://docs.min.io/docs/javascript-client-quickstart-guide
+   .NET:       https://docs.min.io/docs/dotnet-client-quickstart-guide
+Detected default credentials 'minioadmin:minioadmin', please change the credentials immediately using 'MINIO_ROOT_USER' and 'MINIO_ROOT_PASSWORD'
+IAM initialization complete
+</code></pre></div><h3 id="mock-minio-data"><a href="#mock-minio-data" class="header-anchor">#</a> mock minio data</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># create a new bucket</span>
+$ <span class="token function">mc</span> mb myminio/fluid
+<span class="token comment"># there are some PDFs in my local folder fluid</span>
+$ <span class="token function">mc</span> <span class="token function">cp</span> fluid/* myminio/fluid/
+</code></pre></div><h3 id="dataset-yaml"><a href="#dataset-yaml" class="header-anchor">#</a> dataset.yaml</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> data.fluid.io/v1alpha1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Dataset
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> demo
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">mounts</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">mountPoint</span><span class="token punctuation">:</span> s3<span class="token punctuation">:</span>//spark/fluid<span class="token punctuation">-</span>data
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> spark
+      <span class="token key atrule">options</span><span class="token punctuation">:</span>
+        <span class="token key atrule">alluxio.underfs.s3.endpoint</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//<span class="token punctuation">{</span><span class="token punctuation">{</span>$demo<span class="token punctuation">-</span>minio<span class="token punctuation">-</span>addr<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">:</span><span class="token number">9000</span>
+        <span class="token key atrule">alluxio.underfs.s3.disable.dns.buckets</span><span class="token punctuation">:</span> <span class="token string">&quot;true&quot;</span>
+        <span class="token key atrule">alluxio.underfs.s3.inherit.acl</span><span class="token punctuation">:</span> <span class="token string">&quot;false&quot;</span>
+      <span class="token key atrule">encryptOptions</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> aws.accessKeyId
+        <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+          <span class="token key atrule">secretKeyRef</span><span class="token punctuation">:</span>
+            <span class="token key atrule">name</span><span class="token punctuation">:</span> mysecret
+            <span class="token key atrule">key</span><span class="token punctuation">:</span> aws.accessKeyId
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> aws.secretKey
+        <span class="token key atrule">valueFrom</span><span class="token punctuation">:</span>
+          <span class="token key atrule">secretKeyRef</span><span class="token punctuation">:</span>
+            <span class="token key atrule">name</span><span class="token punctuation">:</span> mysecret
+            <span class="token key atrule">key</span><span class="token punctuation">:</span> aws.secretKey
+</code></pre></div><h3 id="secret-yaml"><a href="#secret-yaml" class="header-anchor">#</a> secret.yaml</h3> <p>create minio accessKeyId and accessKey</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Secret
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> mysecret
+<span class="token key atrule">stringData</span><span class="token punctuation">:</span>
+  <span class="token key atrule">aws.accessKeyId</span><span class="token punctuation">:</span> minioadmin
+  <span class="token key atrule">aws.secretKey</span><span class="token punctuation">:</span> minioadmin
+</code></pre></div><h3 id="runtime-yaml"><a href="#runtime-yaml" class="header-anchor">#</a> runtime.yaml</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> data.fluid.io/v1alpha1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> AlluxioRuntime
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> demo
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">tieredstore</span><span class="token punctuation">:</span>
+    <span class="token key atrule">levels</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">mediumtype</span><span class="token punctuation">:</span> MEM
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> /dev/shm
+        <span class="token key atrule">quota</span><span class="token punctuation">:</span> 20M
+        <span class="token key atrule">high</span><span class="token punctuation">:</span> <span class="token string">&quot;0.95&quot;</span>
+        <span class="token key atrule">low</span><span class="token punctuation">:</span> <span class="token string">&quot;0.7&quot;</span>
+</code></pre></div><h3 id="pod-yaml"><a href="#pod-yaml" class="header-anchor">#</a> pod.yaml</h3> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> demo<span class="token punctuation">-</span>app
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> demo
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> nginx<span class="token punctuation">:</span>latest
+      <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /data
+          <span class="token key atrule">name</span><span class="token punctuation">:</span> demo
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> demo
+      <span class="token key atrule">persistentVolumeClaim</span><span class="token punctuation">:</span>
+        <span class="token key atrule">claimName</span><span class="token punctuation">:</span> demo
+</code></pre></div><h3 id="check-the-data"><a href="#check-the-data" class="header-anchor">#</a> check the data</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>$ k apply -f dataset.yaml
+$ k apply -f secret.yaml
+$ k apply -f runtime.yaml
+$ k apply -f pod.yaml
+$ k <span class="token builtin class-name">exec</span> -ti demo-app <span class="token function">sh</span> 
+$ <span class="token function">ls</span> /data
+data-mesh-in-practice-how-europes-leading-online-platform-for-fashion-goes-beyond-the-data-lake-iteblog.com.pdf
+data-science-across-data-sources-with-apache-arrow-iteblog.com.pdf
+from-hdfs-to-s3-migrate-pinterest-apache-spark-clusters-iteblog.com.pdf
+running-apache-spark-jobs-using-kubernetes-iteblog.com.pdf
+running-apache-spark-on-kubernetes-best-practices-and-pitfalls-iteblog.com.pdf
+scaling-data-and-ml-with-apache-spark-and-feast-iteblog.com.pdf
+using-ai-to-support-proliferating-merchant-changes-iteblog.com.pdf
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepresswebsite/samples/accelerate_hdfs.html" class="prev">
+        DEMO - Speed Up Accessing HDFS Client Files
+      </a></span> <span class="next"><a href="/vuepresswebsite/samples/data_co_locality.html">
+        DEMO - Cache Co-locality for Workload Scheduling
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepresswebsite/assets/js/app.62980e8d.js" defer></script><script src="/vuepresswebsite/assets/js/2.9a6ad13a.js" defer></script><script src="/vuepresswebsite/assets/js/37.9d5e141f.js" defer></script>
+  </body>
+</html>
